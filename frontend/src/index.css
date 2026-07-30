@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apple-inspired premium SaaS design system */
+
+@layer base {
+  body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+    @apply bg-white text-neutral-900 antialiased;
+  }
+  
+  /* Smooth font rendering like Apple */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Premium white card - Apple style */
+  .card {
+    @apply bg-white border border-neutral-200 rounded-premium-lg shadow-soft-md;
+  }
+  
+  /* Card with hover elevation */
+  .card-hover {
+    @apply card transition-all duration-150 ease-apple hover:shadow-soft-lg;
+  }
+  
+  /* Primary button - minimal, precise */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-premium bg-neutral-900 px-4 py-2.5 text-sm font-medium text-white shadow-soft transition-all duration-150 ease-apple hover:bg-neutral-800 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  /* Secondary button - outlined */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-premium border border-neutral-300 bg-white px-4 py-2.5 text-sm font-medium text-neutral-700 shadow-soft transition-all duration-150 ease-apple hover:bg-neutral-50 hover:border-neutral-400 active:scale-[0.98];
+  }
+  
+  /* Input field - clean and minimal */
+  .input-field {
+    @apply w-full px-4 py-2.5 bg-white border border-neutral-300 rounded-premium text-neutral-900 placeholder-neutral-400 text-sm transition-all duration-150 ease-apple focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  /* Section container with light background */
+  .section-container {
+    @apply bg-neutral-100 rounded-premium-lg p-6;
+  }
+}
+
